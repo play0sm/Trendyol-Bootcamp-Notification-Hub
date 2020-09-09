@@ -80,7 +80,6 @@ public class SubscriptionManager<T> {
 
     public boolean isBlocked(Date date) {
         for (Subscription<T> item : unPaidSubscribedPackages) {
-            System.out.println(diffToDay(diffBetweenDates(date, item.getDate())) > (30 * userBlockingMonthLimit));
             if (diffToDay(diffBetweenDates(date, item.getDate())) > (30 * userBlockingMonthLimit)) {
                 return true;
             }
